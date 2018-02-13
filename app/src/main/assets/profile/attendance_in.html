@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" />
+        <meta name="viewport" content="initial-scale=1.0">
+    	<meta name="viewport" content="width=device-width, initial-scale=1">
+	    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0">
+        <title>PROFile App</title>
+        <!-- Bootstrap -->
+        <link href="css/bootstrap.css" rel="stylesheet">
+        <!-- custom -->
+        <link href="css/drawer.css" rel="stylesheet">
+        <link href="css/custom.css" rel="stylesheet">
+        <link href="css/mystyle.css" rel="stylesheet">
+    </head>
+    <body class="bg plane_bg drawer drawer--left">
+        <div class="">
+
+
+            <header class="header fixed clearfix">
+                <div class="col-lg-2 col-md-2 col-sm-2 col-xs-2" >
+                     <button type="button" class="drawer-toggle drawer-hamburger">
+                        <span class="sr-only">toggle navigation</span>
+                        <span class="drawer-hamburger-icon"></span></button>
+                </div>
+
+                <div class="col-lg-8 col-md-8 col-sm-8 col-xs-8"> 
+                    <h1 class="title">Attendance</h1>
+                </div>
+
+               
+                
+                
+                <div class="col-lg-2 col-md-2 col-sm-2 col-xs-2"> 
+                    
+                    
+                    <a href="#" id="but_attendance_hostory">
+                        <img src="images/history.png" class="img-responsive title_icon"  /></a>
+                </div>
+
+            </header>
+			
+            <nav id="dw-s2"  class="drawer-nav" role="navigation">
+
+            </nav>
+            <div class="container">
+                <div class="wrapper" id="div_mark_attendance" style="display: none;">
+                    <div class="col-lg-12 col-md-12 col-sm-8 col-sm-offset-2 col-xs-12">
+                        <div class="profile_box" id="div_profile_pic">
+                        </div>
+                        <div class="username"><div id="div_greeting"></div><span id="spn_name"></span></div>
+                        <div class="time_date" id="div_date_time"></div>
+                        <form class="form-horizontal" id="frm_attendence_in">
+                            <div class="mpin_box">                                
+                                <select name="status" style="display: none;" id="select_status" class="form-control status">
+                                    <option value="">--select status--</option>                                      
+                                </select>
+                                <textarea rows="2" name="remark" maxlength="250" id="text_remark" class="form-control status optional" placeholder="Remark"></textarea>
+                                <a href="#" title="" style="display: none;" id="but_submit_in" class="btn button ">Submit</a>
+                                <a href="#" title="" style="display: none;" id="but_submit_out" class="btn button-black button_out">
+                                    OUT</a>
+                            </div>
+                            <!--div class="form-group text-center">
+
+                            </div-->
+                        </form>
+                        <div id="div_msg_block" style=" display: none;" class="message">    
+                            <img src="images/ok.png" class="img-responsive" />                         
+                            <div id="div_msg_block_msg_content"  class="message_note">
+
+                            </div>
+                            <a href="#" title=""  class="icon_home btn button">Home</a>
+                        </div>                        
+                    </div>
+                </div>
+                <div class="wrapper2" id="div_attendance_main" style="display: none;">
+                    
+                    <div style="margin-bottom:10px;">
+                        Select Month: <input type="month" id="input_atd_month" /><input type="button" id="but_atd_search" value="View">
+                    </div>
+                    
+                    <div id="div_attendance_history" >
+                        
+                    </div>
+                    
+                </div>
+            </div>
+            <!-- /footer content -->
+            <!-- /footer content -->
+            <footer class="footer">
+
+            </footer>
+        </div>
+        <script src="js/jquery-1.12.0.min.js" type="text/javascript"></script>
+       
+        <script src="js/android_lib.js" type="text/javascript"></script>
+        <script src="js/attendence.js" type="text/javascript"></script>
+        <!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
+        <script src="js/tether.min.js"></script>
+		
+        <!-- Include all compiled plugins (below), or include individual files as needed -->
+        <script src="js/bootstrap.min.js"></script>
+    <script src="js/iscroll.js"></script>
+    <script src="js/drawer.js" charset="utf-8"></script>
+    <script>
+    $(document).ready(function() {
+      $('.drawer').drawer();
+    });
+  </script>
+		
+    </body>
+</html>

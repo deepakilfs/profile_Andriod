@@ -1,0 +1,16 @@
+<resources>
+    <string name="app_name">profile</string>
+    <string name="notification">Notifications</string>
+    <string name="progress_dialog_text">Loading Please Wait...</string>
+    <string name="unique_shared_pref">com.tsdg.ilfsets.emp_profile</string>
+    <string name="token">Token</string>
+    <string name="Auth">Authorization</string>
+<!-- google analytics screens -->
+    <!--New profileaApp_2 account id-->
+    <string name="analytics_id">UA-114000809-1</string>
+    <!---old tracking id commented-->
+    <!--<string name="analytics_id">UA-113803871-1</string>-->
+   <!-- <string name="analytics_id">UA-106627147-1</string>-->
+    <string name="notification_activity">Notification Activity</string>
+    <string name="home_activity">Home Activity</string>
+</resources>

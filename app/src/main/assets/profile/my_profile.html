@@ -1,0 +1,447 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <meta http-equiv="cache-control" content="max-age=0" />
+        <meta http-equiv="cache-control" content="no-cache" />
+        <meta http-equiv="expires" content="0" />
+        <meta http-equiv="expires" content="Tue, 01 Jan 1980 1:00:00 GMT" />
+        <meta http-equiv="pragma" content="no-cache" />
+        <title>PROFile App</title>
+        <!-- Bootstrap -->
+        <link href="css/bootstrap.css" rel="stylesheet">
+        <link href="css/datepicker.css" rel="stylesheet">
+        <!-- custom -->
+        <link href="css/drawer.css" rel="stylesheet">
+        <link href="css/custom.css" rel="stylesheet">
+        <link rel="stylesheet" href="css/jquery-ui.css">
+        <style>
+		 textarea.form-control {
+				color: #000;
+				font-size: 14px;
+				font-weight: bold;
+			}
+			.ExtNo
+			{
+				width:40px;
+			    padding:0 5px 5px 9px !important;
+			}
+			.offNo
+			{
+				width:100px;
+			}
+        </style>
+
+    </head>
+    <body class="bg plane_bg drawer drawer--left">
+        <div class="">
+            <header class="header fixed clearfix">
+                <div class="col-lg-2 col-md-2 col-sm-2 col-xs-2" >
+                    <button type="button" class="drawer-toggle drawer-hamburger">
+                        <span class="sr-only">toggle navigation</span>
+                        <span class="drawer-hamburger-icon"></span></button>
+                </div>
+
+                <div class="col-lg-8 col-md-8 col-sm-8 col-xs-8">
+                    <h1 class="title">My Profile</h1>
+                </div>
+
+            </header>
+			<nav id="dw-s2"  class="drawer-nav" role="navigation">
+
+            </nav>
+            <!-- Nav tabs -->
+            <div class="tabs-wrapper">
+                <ul class="nav classic-tabs tabs-grey" role="tablist">
+                    <li class="nav-item"><a class="nav-link waves-light active" data-toggle="tab" href="#panel51"
+                                            role="tab">Personal</a> </li>
+                    <li class="nav-item"><a class="nav-link waves-light" data-toggle="tab" href="#panel52"
+                                            role="tab">Official</a> </li>
+                    <!--li class="nav-item"><a class="nav-link waves-light" data-toggle="tab" href="#panel53"
+                                            role="tab">Performance</a> </li-->
+                </ul>
+            </div>
+            <!-- Tab panels -->
+            <div class="tab-content card">
+                <input type="hidden" value="" name="UserId" id="input_UserId" />
+                <!--Panel 1-->
+                <div class="tab-pane fade in active" id="panel51" role="tabpanel">
+                    <div class="form-horizontal my_profile_form">
+                        <div class="profile_box profile_icon" id="div_profile_pic">
+                            <input type="file" accept="image/*" capture="camera" name="profilePic" id="file_profilePic"
+                                   style="display: none;" />
+                        </div>
+                        <span class="edit">
+                            <img src="images/edit_profile.png" id="iconProfilePicEdit" class="img-responsive" />
+                        </span>
+                        <div class="form-group">
+                            <label class="control-label col-lg-4 col-md-4 col-sm-4  col-xs-4" for="email">
+                                Name </label>
+                            <div class="col-lg-8 col-md-8 col-sm-8  col-xs-8">
+                                <input type="text" class="form-control" id="input_Name" name="Name" disabled>
+                            </div>
+                        </div>
+                        <div class="form-group">
+                            <label class="control-label col-lg-4 col-md-4 col-sm-4  col-xs-4" for="Company">
+                                Company </label>
+                            <div class="col-lg-8 col-md-8 col-sm-8  col-xs-8">
+                                <input type="text" class=" form-control" id="input_Company" disabled name="Company">
+                            </div>
+                        </div>
+                        <div class="form-group">
+                            <label class="control-label col-lg-4 col-md-4 col-sm-4  col-xs-4" for="Department">
+                                Department </label>
+                            <div class="col-lg-8 col-md-8 col-sm-8  col-xs-8">
+                                <input type="text" class=" form-control" id="input_Department" disabled name="Department">
+                            </div>
+                        </div>
+                        <!--div class="form-group">
+                            <label class="control-label col-lg-4 col-md-4 col-sm-4  col-xs-4" for="Designation ">
+                                Designation </label>
+                            <div class="col-lg-8 col-md-8 col-sm-8  col-xs-8">
+                            <input type="text" class=" form-control" id="input_Designation" disabled name="Designation"
+                                placeholder="UI/UX Developer">
+                            </div>
+                        </div-->
+                        <div class="form-group">
+                            <label class="control-label col-lg-4 col-md-4 col-sm-4  col-xs-4" for="Grade">
+                                Grade </label>
+                            <div class="col-lg-8 col-md-8 col-sm-8  col-xs-8">
+                                <input type="text" class=" form-control" id="input_Grade" disabled name="Grade">
+
+                            </div>
+                        </div>
+                        <div class="form-group">
+                            <label class="control-label col-lg-4 col-md-4 col-sm-4  col-xs-4" for="Location">
+                                Location </label>
+                            <div class="col-lg-8 col-md-8 col-sm-8  col-xs-8">
+                                <input type="text" class="form-control" id="input_Location" name="Location"
+                                       disabled>
+
+                            </div>
+                        </div>
+                        <div class="form-group">
+                            <label class="control-label col-lg-4 col-md-4 col-sm-4  col-xs-4" for="Emp Code ">
+                                Emp Code </label>
+                            <div class="col-lg-8 col-md-8 col-sm-8  col-xs-8">
+                                <input type="text" class="form-control" id="input_EmployeeCode" name="EmployeeCode"
+                                       disabled>
+                            </div>
+                        </div>
+                        <div class="form-group">
+                            <label class="control-label col-lg-4 col-md-4 col-sm-4  col-xs-4" for="Date of Birth">
+                                Date of Birth </label>
+                            <div class="col-lg-8 col-md-8 col-sm-8  col-xs-8">
+                              
+                                <input type="type" class="form-control" id="input_OriginalBirthDate" name="OriginalBirthDate" disabled="disabled" readonly />
+
+                                <span class="edit_field">
+                                    <img src="images/edit_field.png" class="img-responsive" />
+                                </span>
+                                 <input type="text" class="form-control" id="input_BirthDate" name="BirthDate"
+                                       disabled="disabled" style="display:none;" readonly  />
+                                       
+                                 <input type="hidden" class="form-control" id="input_OriginalBirthDateText" name="OriginalBirthDatetext"  />
+                                
+                            </div>
+                        </div>
+                        <div class="form-group">
+                        	<div class="col-sm-4"></div>
+                            <div class="col-lg-8 col-md-8 col-sm-8  col-xs-8 pull-right">
+                        	  <label class="chkevent" for="IsActiveBirthDay">
+                                <input type="checkbox" id="Input_IsActiveBirthDay" name="IsActiveBirthDay" class="group-checkable"  data-set="#sample_2 .checkboxes" />
+                                Unsubscribe from birthday wishes <span></span> </label>
+                             </div>
+                        </div>
+                        <div class="form-group">
+                            <label class="control-label col-lg-4 col-md-4 col-sm-4  col-xs-4" for="Blood Group">
+                                Blood Group </label>
+                            <div class="col-lg-8 col-md-8 col-sm-8  col-xs-8">
+                                <input type="text" class="form-control" maxlength="6" id="input_BloodGroup" disabled name="BloodGroup"
+                                       placeholder="">
+
+                                <span class="edit_field">
+                                    <img src="images/edit_field.png" class="img-responsive" />
+                                </span>
+                            </div>
+                        </div>
+                        <!--div class="form-group">
+                            <label class="control-label col-lg-4 col-md-4 col-sm-4  col-xs-4" for="Education">
+                                Education </label>
+                            <div class="col-lg-8 col-md-8 col-sm-8  col-xs-8">
+                            <input type="text" class=" form-control" id="input_Qualification" disabled name="Qualification"
+                                disabled placeholder="BSc.IT">
+                            </div>
+                        </div-->
+
+                        <div class="form-group">
+                            <label class="control-label col-lg-4 col-md-4 col-sm-4  col-xs-4" for="Contact Number">
+                                Contact Number </label>
+                            <div class="col-lg-8 col-md-8 col-sm-8  col-xs-8">
+                                <input type="text" class=" form-control" id="input_Mobile" disabled name="Mobile">
+                            </div>
+                        </div>
+                        <div class="form-group">
+                            <label class="control-label col-lg-4 col-md-4 col-sm-4  col-xs-4" for="E-Mail ID">
+                                E-Mail ID </label>
+                            <div class="col-lg-8 col-md-8 col-sm-8  col-xs-8">
+                                <input type="text" class=" form-control" id="input_OfficialEmailId" disabled name="OfficialEmailId">
+                            </div>
+                        </div>
+                        <div class="form-group">
+                            <label class="control-label col-lg-4 col-md-4 col-sm-4  col-xs-4" for="Office Number">
+                                Office Number </label>
+                            <div class="col-lg-3 col-md-3 col-sm-3 col-xs-4">
+                                <input type="text" class="form-control offNo" id="input_OfficeNo" disabled name="OfficeNo">
+                            </div>
+                            <div class="col-lg-1 col-md-1 col-sm-1 col-xs-2" style="font-size:12px; font-weight:600; padding-left:0px;">Ext No</div>
+                            <div class="col-lg-2 col-md-2 col-sm-2  col-xs-2" style="margin-left: -30px;">
+                            	<input pattern="\d{4}" class="form-control ExtNo" id="input_ExtNo" disabled name="ExtNo" oninput="maxLengthCheck(this)"
+    type = "number" maxlength = "4" min = "1"   max = "999"  />
+                                <span class="edit_field" style="right: -16px !important;">
+                                    <img src="images/edit_field.png" class="img-responsive" />
+                                </span>
+                            </div>
+                            
+                        </div>
+                        <div class="form-group">
+                        	<label class="control-label col-lg-4 col-md-4 col-sm-4  col-xs-4" for="Current Address">Current Address</label>
+                            <div class="col-lg-8 col-md-8 col-sm-8  col-xs-8">
+                            	<textarea type="text" multiple="multiple" style="width:190px; height:38px;" class="form-control curaddress" id="input_CurrentAddress" disabled name="CurrentAddress"></textarea>
+                                <input class="form-control inputCurrAddres" id="input_CurrentAddress" name="CurrentAddress" style="display:none; width:190px" />
+                                 <span class="edit_field updatecurraddres" id="spancrrAdd" style="right: 21px !important;">
+                                    <img src="images/edit_field.png" class="img-responsive" />
+                                </span>
+                            </div>
+                        </div>
+                        <div class="form-group">
+                            <label class="control-label col-lg-4 col-md-4 col-sm-4  col-xs-4" for="In Case of Emergency.">
+                                In Case of Emergency. </label>
+                            <div class="col-lg-8 col-md-8 col-sm-8 col-xs-8">
+                                <input type="number" maxlength="10"  pattern="[0-9]" class="form-control onlyMobileNo" id="input_EmergencyContactNo" disabled name="EmergencyContactNo"
+                                       placeholder="">
+                                <span class="edit_field">
+                                    <img src="images/edit_field.png" class="img-responsive" />
+                                </span>
+                            </div>
+                        </div>
+                        <div class="form-group">
+                            <label class="control-label col-lg-4 col-md-4 col-sm-4  col-xs-4" for="ICE Relationship">
+                                ICE Relationship</label>
+                            <div class="col-lg-8 col-md-8 col-sm-8  col-xs-8">
+                                <input type="text" class=" form-control onlyTextInput" id="input_RelationWithEmergencyContactPerson"
+                                       disabled name="RelationWithEmergencyContactPerson" placeholder="">
+                                <span class="edit_field">
+                                    <img src="images/edit_field.png" class="img-responsive" />
+                                </span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <!--/.Panel 1-->
+                <!--Panel 2-->
+                <div class="tab-pane fade" id="panel52" role="tabpanel">
+                    <div class="form-horizontal my_profile_form">
+                        <div class="form-group">
+                            <label class="control-label col-lg-4 col-md-4 col-sm-4  col-xs-4" for="EmployeeType">
+                                Type of Engagement </label>
+                            <div class="col-lg-8 col-md-8 col-sm-8  col-xs-8">
+                                <input type="text" class=" form-control" id="input_EmployeeType" name="EmployeeType"
+                                       disabled>
+                            </div>
+                        </div>
+                        <!--div class="form-group">
+                            <label class="control-label col-lg-4 col-md-4 col-sm-4  col-xs-4" for="Date of Joining  ">
+                            Date of Joining </label>
+                            <div class="col-lg-8 col-md-8 col-sm-8  col-xs-8">
+                            <input type="text" class=" form-control" id="input_JoiningDate" name="JoiningDate"
+                                disabled placeholder="-">
+                            </div>
+                        </div-->
+                        <div class="form-group">
+                            <label class="control-label col-lg-4 col-md-4 col-sm-4  col-xs-4" for="ManagerName">
+                                Reporting To </label>
+                            <div class="col-lg-8 col-md-8 col-sm-8  col-xs-8">
+                                <input type="text" class=" form-control" id="input_ManagerName" name="ManagerName"
+                                       disabled>
+                            </div>
+                        </div>
+                        <!--div class="form-group">
+                            <label class="control-label col-lg-4 col-md-4 col-sm-4  col-xs-4" for="Overall Experience">
+                            Overall Experience </label>
+                            <div class="col-lg-8 col-md-8 col-sm-8  col-xs-8">
+                            <input type="text" class=" form-control" id="input_Experience" name="Experience"
+                                disabled placeholder="6 Years 6 Months ">
+                            </div>
+                        </div-->
+                        <div class="form-group">
+                            <label class="control-label col-lg-4 col-md-4 col-sm-4  col-xs-4" for="CTC">
+                                CTC </label>
+                            <div class="col-lg-8 col-md-8 col-sm-8  col-xs-8">
+                                <input type="text" class=" form-control" id="input_CTC" name="CTC" disabled>
+                            </div>
+                        </div>
+                        <div class="form-group">
+                            <label class="control-label col-lg-4 col-md-4 col-sm-4  col-xs-4" for="Leave Balance">
+                                Leave Balance </label>
+                            <div class="col-lg-8 col-md-8 col-sm-8  col-xs-8">
+                                <input type="text" class=" form-control" id="input_LeaveBalance" name="LeaveBalance"
+                                       disabled >
+                            </div>
+                        </div>
+
+                        <div class="form-group">
+                            <label class="control-label col-lg-4 col-md-4 col-sm-4  col-xs-4" for="PAN No">
+                                PAN No. </label>
+                            <div class="col-lg-8 col-md-8 col-sm-8  col-xs-8">
+                                <input type="text" class=" form-control" id="input_PanNo" disabled name="PanNo" disabled>
+                            </div>
+                        </div>
+                        <div class="form-group">
+                            <label class="control-label col-lg-4 col-md-4 col-sm-4  col-xs-4" for="Aadhar No">
+                                Aadhar No. </label>
+                            <div class="col-lg-8 col-md-8 col-sm-8  col-xs-8">
+                                <input type="text" class=" form-control" id="input_AadharNo" disabled name="AadharNo"  >
+                            </div>
+                        </div>
+                        <div class="form-group">
+                            <label class="control-label col-lg-4 col-md-4 col-sm-4  col-xs-4" for="Mediclaim No">
+                                Mediclaim No </label>
+                            <div class="col-lg-8 col-md-8 col-sm-8  col-xs-8">
+                                <input type="text" class=" form-control" id="input_MediclaimNo" name="MediclaimNo"
+                                       disabled>
+                            </div>
+                        </div>
+                        <div class="form-group">
+                            <label class="control-label col-lg-4 col-md-4 col-sm-4  col-xs-4" for="PF Balance">
+                                UAN No </label>
+                            <div class="col-lg-8 col-md-8 col-sm-8  col-xs-8">
+                                <input type="text" class=" form-control" id="input_UanNo" name="UanNo"
+                                       disabled>
+                            </div>
+                        </div>
+                        <div class="form-group">
+                            <label class="control-label col-lg-4 col-md-4 col-sm-4  col-xs-4" for="PF Balance">
+                                ESIC No </label>
+                            <div class="col-lg-8 col-md-8 col-sm-8  col-xs-8">
+                                <input type="text" class=" form-control" id="input_EsciNo" name="EsciNo"
+                                       disabled>
+                            </div>
+                        </div>
+
+                        <div class="form-group">
+                            <label class="control-label col-lg-4 col-md-4 col-sm-4  col-xs-4" for="PF Balance">
+                                PF No </label>
+                            <div class="col-lg-8 col-md-8 col-sm-8  col-xs-8">
+                                <input type="text" class=" form-control" id="input_PfNo" name="PfNo"
+                                       disabled>
+                                <a target="_blank" href="https://passbook.epfindia.gov.in/MemberPassBook/Login.jsp" class=" btn-link">Check your pf balance</a>
+                                
+                                
+                            </div>
+                        </div>
+                        <!--div class="form-group">
+                            <label class="control-label col-lg-4 col-md-4 col-sm-4  col-xs-4" for="CostCenter">
+                            Cost Center </label>
+                            <div class="col-lg-8 col-md-8 col-sm-8  col-xs-8">
+                            <input type="text" class=" form-control" id="input_CostCenter" name="CostCenter"
+                                disabled placeholder=" - ">
+                            </div>
+                        </div-->
+                        <!--div class="form-group">
+                            <label class="control-label col-lg-4 col-md-4 col-sm-4  col-xs-4" for="PracticeSpoke">
+                                Practice-Spoke </label>
+                            <div class="col-lg-8 col-md-8 col-sm-8  col-xs-8">
+                            <input type="text" class=" form-control" id="input_PracticeSpoke" name="PracticeSpoke"
+                                disabled placeholder=" - ">
+                            </div>
+                        </div-->
+                    </div>
+                </div>
+                <!--/.Panel 2-->
+                <!--Panel 3-->
+                <div class="tab-pane fade" id="panel53" role="tabpanel">
+                    <table class="table table-bordered" id="tbl_pramotion">
+                        <thead>
+                            <tr>
+                                <th>
+                                    Promotion's
+                                </th>
+                                <th>
+                                    Grade
+                                </th>
+                                <th>
+                                    Year
+                                </th>
+                            </tr>
+                        </thead>
+                    </table>
+                    <table class="table table-bordered" id="tbl_prp">
+                        <thead>
+                            <tr>
+                                <th>
+                                    Year
+                                </th>
+                                <th>
+                                    PRP
+                                </th>
+                                <th>
+                                    Performance Rating
+                                </th>
+                            </tr>
+                        </thead>
+                    </table>
+                </div>
+                <!--/.Panel 3-->
+            </div>
+            <!-- /footer content -->
+            <!-- /footer content -->
+            <footer class="footer">
+                <div class="row">
+                    <div class="col-lg-6 col-md-6 col-sm-8 col-xs-12"> <img src="images/iets_logo.png" alt="IETS"  class="img-responsive" /> </div>
+                    <div class="col-lg-6 col-md-6 col-sm-4 col-xs-12 ">
+                        <p class="pull-right">Powered by TSDG</p>
+                    </div>
+                </div>
+            </footer>
+        </div>
+        <script src="js/jquery-1.12.0.min.js" type="text/javascript"></script>
+         
+        <script src="js/jquery-ui.js" type="text/javascript"></script>
+        <script src="js/bootstrap-datepicker.js" type="text/javascript"></script>
+      
+        <script src="js/android_lib.js" type="text/javascript"></script>
+        <script src="js/user_profile.js" type="text/javascript"></script>
+        <script src="js/tether.min.js"></script>    
+		<script src="js/bootstrap-material-design.iife.min.js"></script>
+        <script src="js/bootstrap.min.js"></script>
+        <script src="js/iscroll.js"></script>
+        <script src="js/drawer.js" charset="utf-8"></script>
+ <script>
+    $(document).ready(function() {
+      $('.drawer').drawer();
+    });
+  </script>
+  <script>
+  function maxLengthCheck(object) {
+    if (object.value.length > object.maxLength)
+      object.value = object.value.slice(0, object.maxLength)
+  }
+    
+  function isNumeric (evt) {
+    var theEvent = evt || window.event;
+    var key = theEvent.keyCode || theEvent.which;
+    key = String.fromCharCode (key);
+    var regex = /[0-9]|\./;
+    if ( !regex.test(key) ) {
+      theEvent.returnValue = false;
+      if(theEvent.preventDefault) theEvent.preventDefault();
+    }
+  }
+</script>
+ 
+
+    </body>
+</html>

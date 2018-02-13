@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <bool name="ga_autoActivityTracking">true</bool>
+    <screenName name="com.tsdg.ilfsets.emp_profile.NotificationActivity">Analytics Sample App NotificationSimpleActivity</screenName>
+    <!--New ProfileApp_2 account id-->
+    <string name="ga_trackingId" translatable="false">UA-114000809-1</string>
+    <!--old tracking id commented-->
+   <!-- <string name="ga_trackingId" translatable="false">UA-113803871-1</string>-->
+    <!--<string name="ga_trackingId" translatable="false">UA-106627147-1</string>-->
+    <integer name="ga_dispatchPeriod">30</integer>
+    <bool name="ga_reportUncaughtExceptions">true</bool>
+</resources>

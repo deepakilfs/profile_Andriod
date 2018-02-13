@@ -1,0 +1,134 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" />
+        <meta name="viewport" content="initial-scale=1.0">
+    	<meta name="viewport" content="width=device-width, initial-scale=1">
+	    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0">
+        <title>PROFile App</title>
+        <!-- Bootstrap -->
+        <link href="css/bootstrap.css" rel="stylesheet">
+        <!-- custom -->
+        <link href="css/custom.css" rel="stylesheet">
+        <link href="css/mystyle.css" rel="stylesheet">
+        
+    </head>
+    <body class="bg plane_bg">
+        <div class="bmd-layout-container bmd-drawer-f-l bmd-drawer-overlay">
+            <header class="header fixed clearfix">
+                <div class="col-lg-2 col-md-2 col-sm-2 col-xs-2" >
+                    <a href="#" id="a_menu_icon" data-toggle="drawer" data-target="#dw-s2">
+                        <img src="images/menu.png" class="img-responsive title_icon"  /></a>
+                </div>
+
+                <div class="col-lg-10 col-md-10 col-sm-10 col-xs-10"> 
+                    <h1 class="title">Employee Manual</h1>
+                </div>
+            </header>
+            <div id="dw-s2" class="bmd-layout-drawer bg-faded">
+            </div>
+            <div class="container">
+                <div class="wrapper manual">
+                    <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
+                        <h3 class="title">Table of Contents</h3>
+                        <button class="accordion">Code Of Conduct</button>
+                        <div class="panel">
+                            <ul class="manual_links">
+
+                                <li><a href="employee_manual/operational_guidelines.html" class="topic_link">Operational Guidelines </a></li>
+                                <li><a href="employee_manual/employee_grievance_handling.html" class="topic_link">Employee Grievance Handling </a></li>
+                            </ul>
+                        </div>
+
+                        <button class="accordion"> Employment Policies </button>
+                        <div class="panel">
+                            <ul class="manual_links">
+
+                                <li><a href="employee_manual/working_hours.html" class="topic_link">Working Hours </a></li>
+                                <li><a href="employee_manual/dress_code.html" class="topic_link">Dress Code </a></li>
+                                <li><a href="employee_manual/local_conveyance.html" class="topic_link">Local Conveyance </a></li>
+                                <li><a href="employee_manual/lunch_meals.html" class="topic_link">Lunch / Meals </a></li>
+
+                            </ul>
+                        </div>
+
+
+                        <button class="accordion">Compensation Details </button>
+
+                        <div class="panel">
+                            <ul class="manual_links">
+                                <li><a href="employee_manual/compensation_structure.html" class="topic_link">Compensation Structure </a></li>
+                                <li><a href="employee_manual/component_details.html" class="topic_link">Component Details </a></li>
+                                <li><a href="employee_manual/leave_travel_allowance_policy.html" class="topic_link">Leave Travel Allowance Policy </a></li>
+                                <li><a href="employee_manual/telephone_policy.html" class="topic_link">Telephone Policy </a></li>
+                                <li><a href="employee_manual/medical_benefitsPpolicy.html" class="topic_link">Medical Benefits Policy </a></li>
+                            </ul>
+                        </div>
+
+
+                        <button class="accordion active">Functional Policies </button>
+                        <div class="panel" style="display: block;">
+                            <ul class="manual_links">
+                                <li><a href="employee_manual/leave_policy.html" class="topic_link active">Leave Policy </a></li>
+                                <li><a href="employee_manual/guest_house_policy.html" class="topic_link">Guest House Policy </a></li>
+                                <li><a href="employee_manual/it_usage_policy.html" class="topic_link">IT Usage Policy </a></li>
+                                <li><a href="employee_manual/travel_policy.html" class="topic_link">Travel Policy </a></li>
+                                <li><a href="employee_manual/transfer_policy.html" class="topic_link">Transfer Policy </a></li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <!-- /footer content -->
+            <!-- /footer content -->
+            <footer class="footer">
+                <div class="row">
+                    <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12"> <img src="images/iets_logo.png" alt="IETS"  class="img-responsive" /> </div>
+                </div>
+
+            </footer>
+        </div>
+        <script src="js/jquery-1.12.0.min.js" type="text/javascript"></script>
+       
+        <script src="js/android_lib.js" type="text/javascript"></script>
+        <script src="js/attendence.js" type="text/javascript"></script>
+        <!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
+        <script src="js/tether.min.js"></script>
+        <script src="js/bootstrap-material-design.iife.min.js"></script>      
+        <!-- Include all compiled plugins (below), or include individual files as needed -->
+        <script src="js/bootstrap.min.js"></script>
+        <script>
+            $('body').bootstrapMaterialDesign();
+        </script>
+
+        <script>
+            $(document).ready(function () {
+                var acc = document.getElementsByClassName("accordion");
+                var i;
+
+                for (i = 0; i < acc.length; i++) {
+                    acc[i].onclick = function () {
+
+                        var panel = this.nextElementSibling;
+
+                        $(".accordion.active").not(this).removeClass('active');
+
+                        $(".panel").not(panel).hide();
+
+                        this.classList.toggle("active");
+
+                        if (panel.style.display === "block") {
+                            panel.style.display = "none";
+                        } else {
+                            panel.style.display = "block";
+                        }
+                    };
+                }
+
+            });
+
+        </script>
+
+    </body>
+</html>

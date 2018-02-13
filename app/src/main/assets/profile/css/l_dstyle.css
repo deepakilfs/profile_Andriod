@@ -1,0 +1,62 @@
+@charset "utf-8";
+/* CSS Document */
+
+.btn.red:not(.btn-outline) {
+    color: #ffffff;
+    background-color: #e7505a;
+    border-color: #e7505a;
+}
+components.css:1571
+.btn:not(.btn-sm):not(.btn-lg) {
+    line-height: 1.44;
+}
+components.css:1565
+.btn {
+    outline: none !important;
+    box-shadow: none !important;
+}
+
+
+/*--- Skilltest Box --- */
+.skilltest-box { background:#fff; position:relative; margin-bottom:20px; border-radius:6px; box-shadow:0 2px 4px 0 rgba(0, 0, 0, 0.18);}
+.skilltest-box > a { text-decoration:none; display:block; height:120px; padding:16px;}
+.skilltest-box .image { float:right; width:64px; height:64px; text-align:center; line-height:61px; border:1px solid #dadada; border-radius:3px;}
+.skilltest-box .image img { height:62px; width:62px; vertical-align:middle;}
+.skilltest-box .details { margin-right:90px;}
+.skilltest-box h3 { margin-bottom:6px; max-height:44px; overflow:hidden;}
+.skilltest-box:hover h3 {color:#d7263d;}
+.skilltest-box p { margin-bottom:0; color:#8a858d;}
+.skilltest-box p strong { font-weight:normal; color:#4A4548;}
+.skilltest-box p span { font-weight:600;}
+.skilltest-box p.see-all { position:absolute; bottom:15px;}
+
+#popular-skills .view-all-block { padding-top:0;}
+
+/*--- Skilltest Box1 --- */
+.course-box1 { padding:16px; background-color: #ffffff; box-shadow:0 2px 4px 0 rgba(0, 0, 0, 0.18); border-bottom:1px solid #e0e0e0;}
+.course-box1:first-child {  border-top-left-radius:6px;  border-top-right-radius:6px; }
+.course-box1:last-child {  border-bottom-left-radius:6px;  border-bottom-right-radius:6px; margin-bottom:16px; border-bottom:0;     margin-top: 15px; }
+.course-box1 p { margin:0;color:#8a858d;}
+.course-box1 p strong { font-weight:600; color:#4A4548; font-weight:normal;}
+.course-box1 p span.block { display:block; float:left; margin-right:24px;}
+.course-box1 p span.block:last-child { margin-right:0;}
+.course-box1 .leaderboard-icon { float:right; display:block;}
+.course-box1 .leaderboard-icon:hover .leaderboard-fill { fill:#7a7f8a;}
+.course-box1 .details { float:left; width:auto;}
+.course-box1 .details p { float:left; width:80%;}
+.course-box1 .button1 { min-width:120px; float:right;}
+.course-box1 img { float:left; padding:10px;    }
+
+
+
+@media (max-width:767px) {
+
+    /*--- Skilltest Box  --- */
+	.skilltest-box { margin-bottom:8px;}
+	
+	/*--- Skilltest Box1  --- */
+	.course-box1 p span.block { font-size:12px;}
+	.course-box1 p strong { font-size:14px;}
+	
+
+}

@@ -1,0 +1,56 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <title></title>
+    <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
+    <script language="javascript" type="text/javascript">
+
+        var user = {
+            UserName: "admin",
+            FirstName: "admin",
+            LastName: "admin",
+            DepartmentId: 2
+        }
+        var userJson = JSON.stringify(user);
+
+        // GET Request
+        function GetRequest() {
+            var apiResponse;
+            var url = "http://10.60.41.36/VLELInQApi/api/getnodes?userName=" + user.UserName + "&firstName=" + user.FirstName + "&lastName=" + user.LastName + "&departmentId=" + user.DepartmentId;
+            jQuery.ajax({
+                crossDomain: true,
+                dataType: "json",
+                url: url,
+                async: false,
+                context: document.body
+            }).success(function (json) {
+                apiResponse = JSON.stringify(json);
+            });
+            console.log(apiResponse);
+        };
+
+        // POST Resquest
+        function PostRequest() {
+            var apiResponse;
+            var url = "http://10.60.41.36/VLELInQApi/api/nodes";
+            jQuery.ajax({
+                crossDomain: true,
+                async: false,
+                type: "POST",
+                url: url,
+                data: userJson,
+                dataType: "json",
+                context: document.body,
+                contentType: 'application/json; charset=utf-8'
+            }).success(function (json) {
+                apiResponse = JSON.stringify(json);
+            });
+            console.log(apiResponse);
+        }
+    </script>
+</head>
+<body>
+    <a href="#" onclick="GetRequest();">Get</a><br />
+    <a href="#" onclick="PostRequest();">Post</a>
+</body>
+</html> 

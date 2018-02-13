@@ -1,0 +1,47 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <title>PROFile App</title>
+        <!-- Bootstrap -->
+        <link href="css/bootstrap.css" rel="stylesheet">
+        <!-- custom -->
+        <link href="css/custom.css" rel="stylesheet">
+        <link href="css/mystyle.css" rel="stylesheet">
+        
+    </head>
+    <body class="splash">
+        <div class="registration" style="top: 25%;">
+            <form class="form-horizontal">
+                <div class="container">
+                    <div class="logo" style="margin-bottom: 30px;" >`
+                        <a class="navbar-brand" href="#">
+                            <img class="img-responsive" src="images/logo.png" /></a>
+                    </div>
+                    <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
+
+                        <p class="text-center" id="siteversion_message">-</p>
+
+                        <p class="text-center" style="margin-top: 30px;">© IL&FS Education & Technology Services Ltd 1998-2017</p>
+                    </div>
+
+                </div>
+            </form>
+        </div>
+        <script src="js/jquery-1.12.0.min.js" type="text/javascript"></script>
+        <script src="js/android_lib.js" type="text/javascript"></script>
+
+        <script>
+            $(document).ready(function () {
+                setTimeout(function () {
+                    window.location = "login.html";
+                }, 1000);
+                $('#siteversion_message').html(MSG_SITE_VERSION_CONTROL);
+            });
+
+        </script>
+
+    </body>
+</html>

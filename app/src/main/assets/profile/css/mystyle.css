@@ -1,0 +1,35 @@
+/*
+To change this license header, choose License Headers in Project Properties.
+To change this template file, choose Tools | Templates
+and open the template in the editor.
+*/
+/* 
+    Created on : 9 Apr, 2017, 7:07:20 PM
+    Author     : Prashant.Jha
+*/
+
+.validation_error{
+      border-bottom: 2px solid #ff3d00 !important;    
+}
+
+.genderDistribution {
+    width: 50%;
+    float: left;
+}
+.countbyCategory {
+	
+}
+.designationcount {
+    width: 50%;
+    float: left;
+}
+.container
+{
+    margin-bottom: 75px;
+	padding-left:14px;
+}
+.table > tbody > tr > td, .table > thead > tr > th {
+    font-size: 12px;
+}
+
+

@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <meta http-equiv="cache-control" content="max-age=0" />
+        <meta http-equiv="cache-control" content="no-cache" />
+        <meta http-equiv="expires" content="0" />
+        <meta http-equiv="expires" content="Tue, 01 Jan 1980 1:00:00 GMT" />
+        <meta http-equiv="pragma" content="no-cache" />
+        <title>PROFile App</title>
+        <!-- Bootstrap -->
+        <link href="css/bootstrap.css" rel="stylesheet">
+        <!-- custom -->
+        <link href="css/custom.css" rel="stylesheet">
+
+    </head>
+    <body class="bg plane_bg">
+        <div class="">
+            <header class="header fixed clearfix">
+                <div class="col-lg-2 col-md-2 col-sm-2 col-xs-2" >
+                    <a href="timesheet.html" >
+                        <img src="images/back.png" class="img-responsive title_icon"  /></a>
+                </div>
+
+                <div class="col-lg-6 col-md-6 col-sm-6 col-xs-6"> 
+                    <h1 class="title">Filter</h1>
+                </div>
+
+                <div class="col-lg-4 col-md-4 col-sm-4 col-xs-4 page_actions"> 
+                    <a href="#" id="con_addr_apply_filter">
+                        <img src="images/ok.png" class="img-responsive title_icon"></a>
+                    <a href="#" id="icon_addr_clear_filter" class="action_bar_link">Clear</a>
+                </div>
+
+            </header>
+
+
+            <div class="container">
+                <div class="wrapper" id="">
+
+                    <!--div class="filter">       
+                        <span class="tag label">  <span> IL&FS Education</span>  <a><i class="remove glyphicon glyphicon-remove-sign glyphicon-white"></i></a> </span>
+                        <span class="tag label">  <span>Bihar</span>  <a><i class="remove glyphicon glyphicon-remove-sign glyphicon-white"></i></a> </span>
+                    </div-->
+
+                    <div class="addressbook_filter">
+                        Select Month:
+                        <input type="month" id="time_sheet_month"/>
+
+                    </div>
+
+                </div>
+            </div>
+
+
+            <!-- /footer content -->
+            <footer class="footer">
+                <div class="row">
+                    <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12"> <img src="images/iets_logo.png" alt="IETS"  class="img-responsive" /> </div>
+                </div>
+
+            </footer>
+        </div>
+        <script src="js/jquery-1.12.0.min.js" type="text/javascript"></script>
+        <script src="js/android_lib.js" type="text/javascript"></script>        
+        <script src="js/addressbook.js" type="text/javascript"></script>
+        <script src="js/tether.min.js"></script>
+
+        <!-- Include all compiled plugins (below), or include individual files as needed -->
+        <script src="js/bootstrap.min.js"></script>
+
+
+        <script>
+            var acc = document.getElementsByClassName("accordion");
+            var i;
+
+            for (i = 0; i < acc.length; i++) {
+                acc[i].onclick = function () {
+                    this.classList.toggle("active");
+                    var panel = this.nextElementSibling;
+                    if (panel.style.display === "block") {
+                        panel.style.display = "none";
+                    } else {
+                        panel.style.display = "block";
+                    }
+                }
+            }
+        </script>
+    </body>
+</html>
